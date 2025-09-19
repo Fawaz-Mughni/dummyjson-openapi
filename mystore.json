@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Blue T-Shirt",
+      "description": "Soft cotton t-shirt in royal blue.",
+      "price": 1200,
+      "category": "Clothing"
+    },
+    {
+      "id": 2,
+      "title": "Black Hoodie",
+      "description": "Fleece-lined hoodie with front pocket.",
+      "price": 2500,
+      "category": "Clothing"
+    },
+    {
+      "id": 3,
+      "title": "White Sneakers",
+      "description": "Casual sneakers with rubber sole.",
+      "price": 5000,
+      "category": "Footwear"
+    },
+    {
+      "id": 4,
+      "title": "Leather Wallet",
+      "description": "Slim brown leather wallet for men.",
+      "price": 1800,
+      "category": "Accessories"
+    },
+    {
+      "id": 5,
+      "title": "Smart Watch",
+      "description": "Fitness tracker with heart rate monitor.",
+      "price": 7500,
+      "category": "Electronics"
+    },
+    {
+      "id": 6,
+      "title": "Laptop Backpack",
+      "description": "Water-resistant backpack with padded laptop compartment.",
+      "price": 3200,
+      "category": "Bags"
+    },
+    {
+      "id": 7,
+      "title": "Sunglasses",
+      "description": "UV-protected black frame sunglasses.",
+      "price": 1500,
+      "category": "Accessories"
+    },
+    {
+      "id": 8,
+      "title": "Gaming Mouse",
+      "description": "RGB wired gaming mouse with 7 buttons.",
+      "price": 2200,
+      "category": "Electronics"
+    },
+    {
+      "id": 9,
+      "title": "Office Chair",
+      "description": "Ergonomic chair with lumbar support.",
+      "price": 12500,
+      "category": "Furniture"
+    },
+    {
+      "id": 10,
+      "title": "Wireless Earbuds",
+      "description": "Noise-cancelling Bluetooth earbuds with charging case.",
+      "price": 4500,
+      "category": "Electronics"
+    }
+  ]
+}
