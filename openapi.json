@@ -17,7 +17,23 @@
         "summary": "Get all products",
         "responses": {
           "200": {
-            "description": "A list of products"
+            "description": "A list of products",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "products": {
+                      "type": "array",
+                      "items": { "$ref": "#/components/schemas/Product" }
+                    },
+                    "total": { "type": "integer" },
+                    "skip": { "type": "integer" },
+                    "limit": { "type": "integer" }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -30,14 +46,17 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "integer"
-            }
+            "schema": { "type": "integer" }
           }
         ],
         "responses": {
           "200": {
-            "description": "A single product"
+            "description": "A single product",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Product" }
+              }
+            }
           },
           "404": {
             "description": "Product not found"
@@ -53,14 +72,51 @@
             "name": "q",
             "in": "query",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
           "200": {
-            "description": "Search results"
+            "description": "Search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "products": {
+                      "type": "array",
+                      "items": { "$ref": "#/components/schemas/Product" }
+                    },
+                    "total": { "type": "integer" },
+                    "skip": { "type": "integer" },
+                    "limit": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Product": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "price": { "type": "number" },
+          "discountPercentage": { "type": "number" },
+          "rating": { "type": "number" },
+          "stock": { "type": "integer" },
+          "brand": { "type": "string" },
+          "category": { "type": "string" },
+          "thumbnail": { "type": "string", "format": "uri" },
+          "images": {
+            "type": "array",
+            "items": { "type": "string", "format": "uri" }
           }
         }
       }
