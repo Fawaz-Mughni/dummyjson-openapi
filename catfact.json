@@ -1,0 +1,33 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Cat Facts API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    { "url": "https://catfact.ninja" }
+  ],
+  "paths": {
+    "/fact": {
+      "get": {
+        "summary": "Get a random cat fact",
+        "responses": {
+          "200": {
+            "description": "A random fact about cats",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "fact": { "type": "string" },
+                    "length": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
